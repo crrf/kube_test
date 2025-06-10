@@ -23,3 +23,5 @@ spec:
     image: busybox
     command: ['sh', '-c', 'sleep 3600']
     imagePullPolicy: IfNotPresent
+  nodeSelector:
+    kubernetes.io/hostname: k8sw2 
