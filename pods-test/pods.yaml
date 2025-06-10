@@ -5,6 +5,7 @@ metadata:
   labels:
     app: test-a
 spec:
+  nodeName: k8sw1
   containers:
   - name: busybox
     image: busybox
@@ -18,10 +19,9 @@ metadata:
   labels:
     app: test-b
 spec:
+  nodeName: k8sw1
   containers:
   - name: busybox
     image: busybox
     command: ['sh', '-c', 'sleep 3600']
     imagePullPolicy: IfNotPresent
-  nodeSelector:
-    kubernetes.io/hostname: k8sw2 
